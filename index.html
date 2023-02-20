@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/aos/aos.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>ArtMedia Consulting SRL</title>
+
+	<meta property="og:title" content="ArtMedia Consulting SRL" />
+	<meta name="twitter:title" content="ArtMedia Consulting SRL" />
+	<meta name="og:image:alt" content="ArtMedia Consulting SRL" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="manifest" href="images/site.webmanifest">
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="images/mstile-150x150.png">
+	<meta name="msapplication-config" content="images/browserconfig.xml">
+	<meta name="pinterest-logo" content="https://art-media.ro/images/pinterest-logo_165x165.png">
+	<meta name="theme-color" content="#2196f3">
+	<meta property="og:site_name" content="ArtMedia Consulting SRL" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@artmedia" />
+	<meta name="twitter:creator" content="@artmedia" />
+	<meta property="og:type" content="page" />
+	<meta property="og:image" content="https://art-media.ro/images/artmedia_1200x630.png">
+	<meta property="twitter:image" content="https://art-media.ro/images/artmedia_1200x627.png">
+	<link property="image_src" href="https://art-media.ro/images/artmedia_1200x627.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="fb:app_id" content="" />
+</head>
+
+<body class="home">
+	<div class="wrapper">
+		<div class="popup">
+			<div class="popup__wrapBody">
+				<div class="popup__body">
+					<div class="popup__content formBlock">
+						<button class="close" type="button">
+							<img class="w-100" src="images/svg/close-mobile.svg" alt="Close">
+						</button>
+						<h5 class="popup__title text-center mx-auto">Enter your contact details and a convenient time to
+							call
+						</h5>
+						<div class="popup__text mx-auto text-center">
+							<p>We will call you right now or during other working hours</p>
+						</div>
+						<form id="popupForm" class="chimeForm d-flex flex-column" name="chimeform" method="post" action="/sendmail.php">
+							<label class="chimeForm__labelField text-center">How can I call you?</label>
+							<div class="chimeForm__wrapField w-100">
+								<input id="popup-name" class="text-center chimeForm__field w-100 reset" type="text"
+									name="popup-name" placeholder="Your Name">
+								<div class="d-flex chimeForm__notification">
+									<span class="chimeForm__required">Required field.</span>
+									<span class="chimeForm__symbols">At least 2 characters.</span>
+								</div>
+							</div>
+							<label class="chimeForm__labelField text-center">Enter your phone</label>
+							<div class="chimeForm__wrapField w-100">
+								<input id="popup-phone" class="text-center chimeForm__field w-100 reset" type="tel"
+									name="popup-phone" placeholder="+9(___)___-__-__">
+								<div class="d-flex chimeForm__notification">
+									<span class="chimeForm__required">Required field.</span>
+								</div>
+							</div>
+							<label class="chimeForm__labelField text-center">Enter your Email</label>
+							<div class="chimeForm__wrapField w-100">
+								<input id="popup-email" class="text-center chimeForm__field w-100 reset" type="text"
+									name="popup-email" placeholder="Your Email">
+								<div class="d-flex chimeForm__notification">
+									<span class="chimeForm__required">Required field.</span>
+									<span class="chimeForm__symbols">Please enter correct Email</span>
+								</div>
+							</div>
+							<input type="text" name="popup-invisible"
+								class="chimeForm__field d-none text-center reset w-100">
+							<div class="chimeForm__wrapButtons d-flex justify-content-between">
+								<button id="call-now" type="button" class="chimeForm__button chimeForm__field">Call
+									now</button>
+								<button id="call-time" type="button"
+									class="chimeForm__button chimeForm__field active">Call on
+									time</button>
+							</div>
+							<input class="chimeForm__hidden" type="text" name="call-now" value="Call now">
+							<input class="text-center chimeForm__field chimeForm__dateTime reset" type="text"
+								name="date-time" placeholder="For example: January 21 at 14:00">
+							<button id="popup-send" type="submit" class="chimeForm__submit" disabled>Call me back</button>
+						</form>
+						<p class="chimeForm__textPrivacyPolicy">By clicking on the button, you consent to processing
+							your personal data and agree to the <a href="/privacy-policy.html">Privacy Policy</a>
+					</div>
+					<div class="popup__content thankBlock popup__content-close">
+						<a href="/" class="logo">ArtMedia</a>
+						<div class="popup__wrap">
+							<h3 class="popup__thanks mx-auto text-center">Thank you, we have accepted your application!
+							</h3>
+							<p class="popup__textAfterSending text-center">Our specialist will contact you shortly.</p>
+							<p class="popup__goodDay text-center">Have a good day!</p>
+						</div>
+						<button type="button" class="chimeForm__submit close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header id="header" class="header position-fixed">
+			<div class="container">
+				<div class="row">
+					<div class="col top-panel align-items-center d-flex justify-content-between">
+						<a href="/" class="logo">ArtMedia</a>
+						<nav id="topmenu" class="topmenu d-flex">
+							<button id="burger" class="topmenu__burger ml-auto" type="button">
+								<span class="topmenu__burgerLine">Burger menu</span>
+							</button>
+							<ul class="topmenu__list">
+								<li class="topmenu__listItem">
+									<a href="#firstScreen" class="topmenu__link">Home</a>
+								</li>
+								<li class="topmenu__listItem">
+									<a href="#about" class="topmenu__link">About Us</a>
+								</li>
+								<li class="topmenu__listItem">
+									<a href="#services" class="topmenu__link">Service</a>
+								</li>
+								<li class="topmenu__listItem">
+									<a href="#team" class="topmenu__link">Team</a>
+								</li>
+								<!-- <li class="topmenu__listItem">
+									<a href="#reviews" class="topmenu__link">Reviews</a>
+								</li> -->
+								<li class="topmenu__listItem">
+									<a href="#faq" class="topmenu__link">Faq</a>
+								</li>
+								<li class="topmenu__listItem">
+									<a href="#news" class="topmenu__link">News</a>
+								</li>
+								<li class="topmenu__listItem desktop-hidden">
+									<a href="#appointment" class="topmenu__link">Appointment Now</a>
+								</li>
+							</ul>
+						</nav>
+						<button id="appointmentBtn" type="button" class="header__button">Appointment Now</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="firstScreen" class="wrap-firstScreen overflow-hidden position-relative">
+			<div class="firstScreen container">
+				<div class="row align-items-center h-100">
+					<div class="col-lg-5">
+						<h2 class="firstScreen__aboveTitle" data-aos="fade-up">Strategic marketing. We work for an
+							effective result!</h2>
+						<h1 class="firstScreen__title" data-aos="fade-up" data-aos-delay="100">AtrMedia Consulting</h1>
+						<p class="firstScreen__text" data-aos="fade-up" data-aos-delay="200"><span>ArtMedia Consulting SRL</span> — we are engaged in SEO optimization of websites, which is necessary for the growth of client's business, profits and positions in search engines. Our company also offers IT consulting and marketing services from the best specialists. Choose professionals.
+						</p>
+						<button id="toCreateAGroup" type="button" class="firstScreen__btn" data-aos="fade-up"
+							data-aos-delay="350" data-aos-offset="0">Call
+							Back</button>
+					</div>
+					<div class="col-7 h-100 align-items-center d-none d-lg-flex fs-ilustratio-col">
+						<img class="firstScreen__bigIllustration" src="images/svg/fs-Illustrations.svg"
+							alt="FS big Illustration" data-aos="zoom-in" data-aos-delay="300">
+					</div>
+				</div>
+				<button class="firstScreen__btnDown position-absolute" type="button" data-aos="fade-up"
+					data-aos-delay="500" data-aos-offset="0">
+					<svg width="23" height="13.958" viewBox="0 0 23 13.958">
+						<path
+							d="M11,22.271.768,12.035a1.264,1.264,0,0,1,0-1.788L1.962,9.053a1.264,1.264,0,0,1,1.786,0l8.15,8.112,8.15-8.112a1.264,1.264,0,0,1,1.786,0l1.194,1.194a1.264,1.264,0,0,1,0,1.788L12.792,22.271A1.264,1.264,0,0,1,11,22.271Z"
+							transform="translate(-0.398 -8.683)" fill="#657783" />
+					</svg>
+				</button>
+			</div>
+			<img class="fs-element" src="images/svg/fs-element.svg" alt="FS Element">
+		</div>
+		<main class="main">
+			<section id="about" class="about position-relative">
+				<h2 class="section-title text-uppercase text-center" data-aos="fade-in">About Us</h2>
+				<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">We offer the best financial solutions</p>
+				<div class="container about__content">
+					<div class="row align-items-center">
+						<div class="col-lg-6 content-column">
+							<h3 class="about__title" data-aos="fade-in" data-aos-delay="100">We work only for a positive result - you enjoy your business!</h3>
+							<p class="about__text" data-aos="fade-in" data-aos-delay="200">Consulting services in the field of information technology.</p>
+							<p class="about__text" data-aos="fade-in" data-aos-delay="300">IT consulting: development of web products (websites, advertising, business solutions, etc.).</p>
+							<p class="about__text" data-aos="fade-in" data-aos-delay="400">Marketing and SEO services: popularization of companies on the Internet.</p>
+							<p class="about__text" data-aos="fade-in" data-aos-delay="500">Business consulting: enterprise management.</p>
+						</div>
+						<div class="col-lg-6 d-flex justify-content-lg-end" data-aos="zoom-in" data-aos-delay="300">
+							<img src="images/svg/about-illustration.svg" alt="About Illustration">
+						</div>
+					</div>
+				</div>
+				<div class="wrap-about__bottomInfo overflow-hidden position-relative">
+					<img class="about__bottomInfoBG position-absolute" src="images/svg/about-bottom-illustration.svg"
+						alt="About bottom illustration">
+					<div class="container about__bottomInfo align-items-end d-flex">
+						<div class="row">
+							<div class="col-12"></div>
+							<div class="col-xl-4 col-lg-12 align-items-center d-flex about__bottomInfoItem">
+								<h4 class="about__bottomInfoTitle" data-aos="fade-left">Why choose us?</h4>
+							</div>
+							<div class="col-xl-2 col-sm-3 about__bottomInfoItem" data-aos="fade-in"
+								data-aos-delay="300">
+								<p>Expertly marketing</p>
+								<p>High quality services</p>
+							</div>
+							<div class="col-xl-2 col-sm-3 about__bottomInfoItem" data-aos="fade-in"
+								data-aos-delay="300">
+								<p>Engaging audiences</p>
+								<p>Build perfect Ads</p>
+							</div>
+							<div class="col-xl-2 col-sm-3 about__bottomInfoItem" data-aos="fade-in"
+								data-aos-delay="300">
+								<p>Innovative business</p>
+								<p>Easy to customize</p>
+							</div>
+							<div class="col-xl-2 col-sm-3 about__bottomInfoItem" data-aos="fade-in"
+								data-aos-delay="300">
+								<p>Team of professionals</p>
+								<p>Positive result</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="services" class="services">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Our services</h2>
+							<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">What we
+								do ?</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-lg-3" data-aos="fade-left">
+							<div class="services__blockImage position-relative">
+								<span class="services__zero">
+									<span class="circle position-absolute"></span>
+									<span class="bg position-absolute"></span>
+									<span class="services__numberZero position-absolute">0</span>
+								</span>
+								<div class="services__number position-absolute">1</div>
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="services__image position-absolute b-lazy h-100 w-100"
+									data-src="images/service-1.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Digital Advertising">
+							</div>
+							<h3 class="services__text text-center position-relative">Digital Advertising</h3>
+							<p>Website development and subsequent promotion strategy. Competitor analysis with further recommendations and other necessary work.
+								</p>
+						</div>
+						<div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="350">
+							<div class="services__blockImage position-relative">
+								<span class="services__zero">
+									<span class="circle position-absolute"></span>
+									<span class="bg position-absolute"></span>
+									<span class="services__numberZero position-absolute">0</span>
+								</span>
+								<div class="services__number position-absolute">2</div>
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="services__image position-absolute b-lazy h-100 w-100"
+									data-src="images/service-2.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Social Media">
+							</div>
+							<h3 class="services__text text-center position-relative">Social Media</h3>
+							<p>Technical optimization of the site with an extended technical task for the programmer. Crowd marketing, work with PR resources, and much more.
+								</p>
+						</div>
+						<div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="650">
+							<div class="services__blockImage position-relative">
+								<span class="services__zero">
+									<span class="circle position-absolute"></span>
+									<span class="bg position-absolute"></span>
+									<span class="services__numberZero position-absolute">0</span>
+								</span>
+								<div class="services__number position-absolute">3</div>
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="services__image position-absolute b-lazy h-100 w-100"
+									data-src="images/service-3.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Research Strategy">
+							</div>
+							<h3 class="services__text text-center position-relative">Research Strategy</h3>
+							<p>Compilation of a large semantic core of the site, with all thematic user requests by topic and product.</p>
+						</div>
+						<div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="950">
+							<div class="services__blockImage position-relative">
+								<span class="services__zero">
+									<span class="circle position-absolute"></span>
+									<span class="bg position-absolute"></span>
+									<span class="services__numberZero position-absolute">0</span>
+								</span>
+								<div class="services__number position-absolute">4</div>
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="services__image position-absolute b-lazy h-100 w-100"
+									data-src="images/service-4.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Strategic Marketing">
+							</div>
+							<h3 class="services__text text-center position-relative">Strategic Marketing</h3>
+							<p>Work on internal website optimization, correction of all internal information on the site, creation of the necessary content, implementation of important elements.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="works overflow-hidden position-relative">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<h2 class="section-title text-uppercase text-center" data-aos="fade-in">How we work ?</h2>
+							<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">What
+								result will
+								you get</p>
+						</div>
+					</div>
+					<div class="row position-relative">
+						<div class="col-md-6 position-relative" data-aos="fade-in">
+							<img class="works__illustration position-absolute" src="images/svg/works-illustration-1.svg"
+								alt="Customer flow will increase - 5-10 timesor more.">
+							<div class="works__blockText align-items-center d-flex position-relative text-center">
+								<div class="works__triangle position-absolute">Triangle</div>
+								<p>Customer flow will increase - <strong>5-10 times or more.</strong></p>
+							</div>
+							<img class="works__arrowOne position-absolute" src="images/svg/works-01.svg"
+								alt="Arrow One">
+						</div>
+						<div class="col-md-6" data-aos="fade-in">
+							<img class="works__illustration position-absolute" src="images/svg/works-illustration-2.svg"
+								alt="The quality will grow service and professionalism employees">
+							<div class="works__blockText align-items-center d-flex position-relative text-center">
+								<div class="works__triangle position-absolute">Triangle</div>
+								<p>The quality will <strong>grow service and professionalism</strong> employees</p>
+							</div>
+							<img class="works__arrowTwo position-absolute" src="images/svg/works-02.svg"
+								alt="Arrow Two">
+						</div>
+						<div class="col-md-6" data-aos="fade-in">
+							<img class="works__illustration position-absolute" src="images/svg/works-illustration-3.svg"
+								alt="It will decrease by 40-70% attraction cost new client">
+							<div class="works__blockText align-items-center d-flex position-relative text-center">
+								<div class="works__triangle position-absolute">Triangle</div>
+								<p>It will <strong>decrease by 40-70%</strong> attraction cost new client</p>
+							</div>
+						</div>
+						<div class="col-md-6" data-aos="fade-in">
+							<img class="works__illustration position-absolute" src="images/svg/works-illustration-4.svg"
+								alt="The number will increase repeat visits - will become more regular customers">
+							<div class="works__blockText align-items-center d-flex position-relative text-center">
+								<div class="works__triangle position-absolute">Triangle</div>
+								<p>The <strong>number will increase repeat</strong> visits - will become more regular
+									customers
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="images/svg/works-left-bottom.svg" class="works__illustrationLeft position-absolute" alt="">
+				<img src="images/svg/works-right-top.svg" class="works__illustrationRight position-absolute" alt="">
+			</section>
+			<!-- <section class="amazingPackage">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Amazing package</h2>
+							<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">SIMPLE
+								PRICING
+							</p>
+						</div>
+					</div>
+					<div class="row plans">
+						<div class="col-md-4" data-aos="fade-left">
+							<p class="amazingPackage__underPlanName text-center">Core features</p>
+							<h3 class="amazingPackage__planName text-center text-uppercase">Basic plan</h3>
+							<div class="amazingPackage__plan">
+								<p class="amazingPackage__planPrice text-center">$29</p>
+								<p class="amazingPackage__planPerYear text-center text-uppercase">Per Year</p>
+								<ul class="amazingPackage__planList">
+									<li class="amazingPackage__planListItem position-relative">Personal training
+										applications
+									</li>
+									<li class="amazingPackage__planListItem position-relative">Step-by-step support</li>
+									<li class="amazingPackage__planListItem position-relative">PLANNING</li>
+								</ul>
+								<a class="amazingPackage__planButton text-center" href="#">Choose Package</a>
+							</div>
+						</div>
+						<div class="col-md-4 active-plan" data-aos="fade-up" data-aos-delay="500">
+							<p class="amazingPackage__underPlanName text-center">Most popular</p>
+							<h3 class="amazingPackage__planName text-center text-uppercase">Standard plan</h3>
+							<div class="amazingPackage__plan">
+								<p class="amazingPackage__planPrice text-center">$59</p>
+								<p class="amazingPackage__planPerYear text-center text-uppercase">Per Year</p>
+								<ul class="amazingPackage__planList">
+									<li class="amazingPackage__planListItem position-relative">Personal training
+										applications
+									</li>
+									<li class="amazingPackage__planListItem position-relative">Step-by-step support</li>
+									<li class="amazingPackage__planListItem position-relative">PLANNING</li>
+								</ul>
+								<a class="amazingPackage__planButton text-center" href="#">Choose Package</a>
+							</div>
+						</div>
+						<div class="col-md-4" data-aos="fade-right">
+							<p class="amazingPackage__underPlanName text-center">Huge features</p>
+							<h3 class="amazingPackage__planName text-center text-uppercase">Premium plan</h3>
+							<div class="amazingPackage__plan">
+								<p class="amazingPackage__planPrice text-center">$119</p>
+								<p class="amazingPackage__planPerYear text-center text-uppercase">Per Year</p>
+								<ul class="amazingPackage__planList">
+									<li class="amazingPackage__planListItem position-relative">Personal training
+										applications
+									</li>
+									<li class="amazingPackage__planListItem position-relative">Step-by-step support</li>
+									<li class="amazingPackage__planListItem position-relative">PLANNING</li>
+								</ul>
+								<a class="amazingPackage__planButton text-center" href="#">Choose Package</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<section id="team" class="ourTeam">
+				<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Our Top Management</h2>
+				<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">Creative People</p>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="ourTeam__worker d-flex flex-column h-100 justify-content-between"
+								data-aos="zoom-out" data-aos-delay="100">
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="ourTeam__image position-absolute h-100 w-100 b-lazy"
+									data-src="images/team-1.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Mike Johnson">
+								<div class="ourTeam__workerContent">
+									<h3 class="ourTeam__name text-center">Mike Johnson</h3>
+									<p class="ourTeam__position text-center">Consultant</p>
+									<ul class="ourTeam__socialList d-flex justify-content-center mt-auto">
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-facebook">
+												<svg viewBox="0 0 12.001 24">
+													<path
+														d="M16,3.985h2.191V.169A28.292,28.292,0,0,0,15,0C11.837,0,9.673,1.987,9.673,5.639V9H6.187v4.266H9.673V24h4.274V13.267h3.345L17.823,9H13.946V6.062c0-1.233.333-2.077,2.051-2.077Z"
+														transform="translate(-6.187)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-instagram">
+												<svg viewBox="0 0 24 24">
+													<path
+														d="M12,5.838A6.158,6.158,0,1,0,18.162,12,6.157,6.157,0,0,0,12,5.838Zm0,10.155a4,4,0,1,1,4-4A4,4,0,0,1,12,15.993Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<path
+														d="M16.948.076c-2.208-.1-7.677-.1-9.887,0A7.172,7.172,0,0,0,2.025,2.017C-.283,4.325.012,7.435.012,12c0,4.668-.26,7.706,2.013,9.979C4.342,24.291,7.5,23.988,12,23.988c4.624,0,6.22,0,7.855-.63,2.223-.863,3.9-2.85,4.065-6.419.1-2.209.1-7.677,0-9.887-.2-4.213-2.459-6.768-6.976-6.976Zm3.5,20.372c-1.513,1.513-3.612,1.378-8.468,1.378-5,0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453,0-5.525-.567-9.5,4.978-9.788,1.274-.045,1.649-.06,4.856-.06l.045.03c5.329,0,9.51-.558,9.761,4.986.057,1.265.07,1.645.07,4.847,0,4.942.093,6.959-1.394,8.453Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<circle cx="1.439" cy="1.439" r="1.439"
+														transform="translate(16.967 4.155)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-twitter">
+												<svg width="24" height="19.5" viewBox="0 0 24 19.5">
+													<path
+														d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.306,9.306,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z"
+														fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-md-4">
+							<div class="ourTeam__worker d-flex flex-column h-100 justify-content-between"
+								data-aos="zoom-out" data-aos-delay="300">
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="ourTeam__image position-absolute h-100 w-100 b-lazy"
+									data-src="images/team-2.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="Jessica Miller">
+								<div class="ourTeam__workerContent">
+									<h3 class="ourTeam__name text-center">Jessica Miller</h3>
+									<p class="ourTeam__position text-center">IT analyst</p>
+									<ul class="ourTeam__socialList d-flex justify-content-center mt-auto">
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-facebook">
+												<svg viewBox="0 0 12.001 24">
+													<path
+														d="M16,3.985h2.191V.169A28.292,28.292,0,0,0,15,0C11.837,0,9.673,1.987,9.673,5.639V9H6.187v4.266H9.673V24h4.274V13.267h3.345L17.823,9H13.946V6.062c0-1.233.333-2.077,2.051-2.077Z"
+														transform="translate(-6.187)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-instagram">
+												<svg viewBox="0 0 24 24">
+													<path
+														d="M12,5.838A6.158,6.158,0,1,0,18.162,12,6.157,6.157,0,0,0,12,5.838Zm0,10.155a4,4,0,1,1,4-4A4,4,0,0,1,12,15.993Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<path
+														d="M16.948.076c-2.208-.1-7.677-.1-9.887,0A7.172,7.172,0,0,0,2.025,2.017C-.283,4.325.012,7.435.012,12c0,4.668-.26,7.706,2.013,9.979C4.342,24.291,7.5,23.988,12,23.988c4.624,0,6.22,0,7.855-.63,2.223-.863,3.9-2.85,4.065-6.419.1-2.209.1-7.677,0-9.887-.2-4.213-2.459-6.768-6.976-6.976Zm3.5,20.372c-1.513,1.513-3.612,1.378-8.468,1.378-5,0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453,0-5.525-.567-9.5,4.978-9.788,1.274-.045,1.649-.06,4.856-.06l.045.03c5.329,0,9.51-.558,9.761,4.986.057,1.265.07,1.645.07,4.847,0,4.942.093,6.959-1.394,8.453Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<circle cx="1.439" cy="1.439" r="1.439"
+														transform="translate(16.967 4.155)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-twitter">
+												<svg width="24" height="19.5" viewBox="0 0 24 19.5">
+													<path
+														d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.306,9.306,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z"
+														fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="ourTeam__worker d-flex flex-column h-100 justify-content-between"
+								data-aos="zoom-out" data-aos-delay="600">
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="ourTeam__image position-absolute h-100 w-100 b-lazy"
+									data-src="images/team-3.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="">
+								<div class="ourTeam__workerContent">
+									<h3 class="ourTeam__name text-center">Jemmy Duront</h3>
+									<p class="ourTeam__position text-center">Marketing analyst</p>
+									<ul class="ourTeam__socialList d-flex justify-content-center mt-auto">
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-facebook">
+												<svg viewBox="0 0 12.001 24">
+													<path
+														d="M16,3.985h2.191V.169A28.292,28.292,0,0,0,15,0C11.837,0,9.673,1.987,9.673,5.639V9H6.187v4.266H9.673V24h4.274V13.267h3.345L17.823,9H13.946V6.062c0-1.233.333-2.077,2.051-2.077Z"
+														transform="translate(-6.187)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-instagram">
+												<svg viewBox="0 0 24 24">
+													<path
+														d="M12,5.838A6.158,6.158,0,1,0,18.162,12,6.157,6.157,0,0,0,12,5.838Zm0,10.155a4,4,0,1,1,4-4A4,4,0,0,1,12,15.993Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<path
+														d="M16.948.076c-2.208-.1-7.677-.1-9.887,0A7.172,7.172,0,0,0,2.025,2.017C-.283,4.325.012,7.435.012,12c0,4.668-.26,7.706,2.013,9.979C4.342,24.291,7.5,23.988,12,23.988c4.624,0,6.22,0,7.855-.63,2.223-.863,3.9-2.85,4.065-6.419.1-2.209.1-7.677,0-9.887-.2-4.213-2.459-6.768-6.976-6.976Zm3.5,20.372c-1.513,1.513-3.612,1.378-8.468,1.378-5,0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453,0-5.525-.567-9.5,4.978-9.788,1.274-.045,1.649-.06,4.856-.06l.045.03c5.329,0,9.51-.558,9.761,4.986.057,1.265.07,1.645.07,4.847,0,4.942.093,6.959-1.394,8.453Z"
+														transform="translate(0 -0.001)" fill="currentColor" />
+													<circle cx="1.439" cy="1.439" r="1.439"
+														transform="translate(16.967 4.155)" fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+										<li class="ourTeam__socialItem">
+											<a href="#" class="ourTeam__socialIink ourTeam__socialIink-twitter">
+												<svg width="24" height="19.5" viewBox="0 0 24 19.5">
+													<path
+														d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.306,9.306,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z"
+														fill="currentColor" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</section>
+			<!-- <section id="reviews" class="reviews overflow-hidden position-relative">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Reviews</h2>
+							<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">What do
+								our
+								clients say?</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="reviews__slider swiper-conteiner overflow-hidden">
+								<div class="reviews__wrapper swiper-wrapper">
+									<div class="reviews__slide swiper-slide container">
+										<div class="row">
+											<div class="col-lg-6" data-aos="fade">
+												<div class="reviews__blockImage overflow-hidden position-relative">
+													<div class="sk-spinner sk-spinner-pulse"></div>
+													<img class="swiper-lazy reviews__image position-absolute"
+														data-src="images/jon-clinvud.jpg"
+														src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+														alt="Jon Clinvud">
+												</div>
+											</div>
+											<div class="col-lg-6" data-aos="fade">
+												<h3 class="reviews__name">Jon Clinvud</h3>
+												<div class="reviews__review position-relative">
+													<img class="reviews__quote reviews__quote-top position-absolute"
+														src="images/svg/quote.svg" alt="Quote">
+													<div class="reviews__fullReview close">
+														<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+															laboris nisi ut
+															aliquip ex ea commodo consequat. Duis aute irure dolor in
+															reprehenderit in
+															voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+														</p>
+														<button type="button" class="reviews__button">
+															<span class="reviews__buttonText reviews__buttonRead">Read
+																full
+																review</span>
+															<span class="reviews__buttonText reviews__buttonCloce">Close
+																full
+																review</span>
+														</button>
+													</div>
+													<img class="reviews__quote reviews__quote-bottom position-absolute"
+														src="images/svg/quote.svg" alt="Quote">
+												</div>
+												<div
+													class="reviews__wrapNavigation align-items-center d-flex justify-content-center position-relative">
+													<div class="swiper-button-prev">
+														<svg width="19.032" height="31.999" viewBox="0 0 19.032 31.999">
+															<path
+																d="M15.223,10.772a2.774,2.774,0,0,1,3.877,0L32.647,24.208a2.685,2.685,0,0,1,.085,3.734L19.384,41.182a2.765,2.765,0,0,1-3.877.014,2.686,2.686,0,0,1,0-3.833L26.853,25.977,15.223,14.591A2.657,2.657,0,0,1,15.223,10.772Z"
+																transform="translate(-14.414 -9.983)" fill="#223242" />
+														</svg>
+													</div>
+													<div class="swiper-button-next">
+														<svg width="19.032" height="31.999" viewBox="0 0 19.032 31.999">
+															<path
+																d="M15.223,10.772a2.774,2.774,0,0,1,3.877,0L32.647,24.208a2.685,2.685,0,0,1,.085,3.734L19.384,41.182a2.765,2.765,0,0,1-3.877.014,2.686,2.686,0,0,1,0-3.833L26.853,25.977,15.223,14.591A2.657,2.657,0,0,1,15.223,10.772Z"
+																transform="translate(-14.414 -9.983)" fill="#223242" />
+														</svg>
+													</div>
+													<div class="swiper-pagination"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="reviews__illustrationLeft position-absolute" src="images/svg/reviews-illustration-left.svg"
+					alt="Reviews Illustration left">
+				<img class="reviews__illustrationRight position-absolute"
+					src="images/svg/reviews-illustration-right.svg" alt="Reviews Illustration right">
+			</section> -->
+			<section id="appointment" class="appointment container">
+				<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Appointment</h2>
+				<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">Sign up now,
+					indicating a
+					convenient time and date for you</p>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="appointment__wrapIllustration position-relative" data-aos="fade-down">
+							<img class="appointment__illustration position-relative"
+								src="images/svg/appointment-illustration.svg" alt="Illustration">
+							<img class="appointment__arrow position-absolute" src="images/svg/appointment-arrow.svg"
+								alt="Arrow">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<form action="/feedback.php" name="appointment" id="appointmentForm"
+							class="appointment__form d-flex flex-wrap position-relative" method="post"
+							autocomplete="off">
+							<div class="appointment__wrapField" data-aos="fade-right">
+								<label class="appointment__label d-block">Name</label>
+								<input type="text" name="first-name" placeholder="Your name" id="first-name"
+									class="appointment__field reset w-100">
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+									<span class="appointment__symbols">At least 2 characters.</span>
+								</div>
+							</div>
+							<div class="appointment__wrapField" data-aos="fade-left">
+								<label class="appointment__label d-block">Phone</label>
+								<input id="phone" type="tel" name="phone" placeholder="+__(___)___-__-__"
+									class="appointment__field reset w-100">
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+								</div>
+							</div>
+							<div class="appointment__wrapField" data-aos="fade-right">
+								<label class="appointment__label d-block">Email</label>
+								<input id="email" type="email" name="email" placeholder="example@gmail.com"
+									class="appointment__field reset w-100">
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+									<span class="appointment__symbols">Please enter correct Email</span>
+								</div>
+							</div>
+							<div class="appointment__wrapField" data-aos="fade-left">
+								<label class="appointment__label d-block">Meeting date</label>
+								<input id="date" type="text" name="date" class="appointment__field reset w-100"
+									placeholder="21.05.2021">
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+								</div>
+							</div>
+							<div class="appointment__wrapField" data-aos="fade-right">
+								<label class="appointment__label d-block">Time</label>
+								<input id="time" type="text" name="time" class="appointment__field reset w-100"
+									placeholder="12:45">
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+								</div>
+							</div>
+							<!-- <div class="appointment__wrapField d-none">
+								<label class="appointment__label d-block">Label</label>
+								<input type="text" name="invisible" class="appointment__field reset w-100">
+							</div> -->
+							<div class="appointment__wrapField appointment__wrapField-wrapTextarea w-100"
+								data-aos="fade-left">
+								<label class="appointment__label d-block">Comment</label>
+								<textarea id="message" name="message" placeholder="Hi"
+									class="appointment__field appointment__field-message reset w-100"></textarea>
+								<div class="d-flex appointment__notification position-absolute">
+									<span class="appointment__required">Required field.</span>
+									<span class="appointment__symbols">At least 20 characters.</span>
+								</div>
+							</div>
+							<div class="appointment__wrapButtonText d-flex flex-wrap flex-md-nowrap align-items-center"
+								data-aos="fade" data-aos-delay="600" data-aos-offset="0">
+								<button id="appointment-send" type="submit" class="appointment__submit" disabled>Send</button>
+								<p class="appointment__text">By clicking on the button, you consent to
+									processing your personal data and agree
+									to the <a href="/privacy-policy.html">Privacy Policy</a></p>
+							</div>
+							<div id="textAfterSending"
+								class="appointment__textAfterSending position-absolute align-items-center justify-content-center">
+								<p>Message sent.</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section id="faq" class="faq position-relative overflow-hidden">
+				<div class="container">
+					<h2 class="section-title text-uppercase text-center" data-aos="fade-in">FAQ</h2>
+					<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">Frequently asked
+						Questions</p>
+					<div class="row position-relative">
+						<div class="col-lg-6">
+							<!-- <p data-aos="fade">Ut enim ad minim veniam, quis nostrud exercitation <strong>ullamco laboris nisi</strong> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+							<div class="accordion js-accordion">
+								<div class="accordion__item js-accordion-item overflow-hidden" data-aos="fade-up">
+									<div class="accordion-header js-accordion-header">HOW IMPORTANT IS TEXT CONTENT FOR
+										MY WEBSITE?</div>
+									<div class="accordion-body js-accordion-body overflow-hidden">
+										<div class="accordion-body__contents">
+											<p>Google makes search results based on textual content, which is a very
+												small percentage compared to images (Google images). Content is still
+												king and will remain so.</p>
+											<p>When you write text for your website, take the time to make it
+												informative and of high quality. It will pay off.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion__item js-accordion-item overflow-hidden" data-aos="fade-up"
+									data-aos-delay="200">
+									<div class="accordion-header js-accordion-header">IF I DECIDE TO CHOOSE YOU, HOW
+										MANY KEYWORDS CAN I FOCUS ON FOR MY CAMPAIGN?</div>
+									<div class="accordion-body js-accordion-body">
+										<div class="accordion-body__contents">
+											<p>The number of keywords is not limited. You are buying a service or time
+												that someone spends working on your website and campaign. If you choose
+												one or more keywords, it's not the same as ten. The time of the campaign
+												is expressed in working hours, we advise you to choose the optimal
+												number of keywords that can have a big impact on a particular
+												optimization period.</p>
+											<p>Sometimes it's better to focus on 2-3 keywords than to spend "energy" on
+												a large number of them and not get the desired results.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion__item js-accordion-item overflow-hidden" data-aos="fade-up"
+									data-aos-delay="400">
+									<div class="accordion-header js-accordion-header">DO YOU DO SEO IN A SPECIFIC
+										COUNTRY OR DO YOU HAVE A WIDE COVERAGE?</div>
+									<div class="accordion-body js-accordion-body">
+										<div class="accordion-body__contents">
+											<p>Each market has its own search engine in addition to the global
+												Google.com. Using proven methodologies, we can analyze the competition
+												in any search engine and in any language.</p>
+											<p>Geographic location is not important and our clients are from all
+												continents.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<!-- <div class="faq__BlockImage overflow-hidden position-relative" data-aos="fade">
+								<div class="sk-spinner sk-spinner-pulse"></div>
+								<img class="faq__image b-lazy"
+									data-src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_960_720.jpg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="">
+							</div> -->
+							<div class="accordion js-accordion">
+								<div class="accordion__item js-accordion-item overflow-hidden" data-aos="fade-up">
+									<div class="accordion-header js-accordion-header">WILL MY WEBSITE RANK IN GOOGLE AND
+										DO YOU PROVIDE A GUARANTEE?</div>
+									<div class="accordion-body js-accordion-body">
+										<div class="accordion-body__contents">
+											<p>In addition to you and your competitors, Google is constantly working to
+												improve its position. Google changes its algorithm frequently, and
+												search results are influenced by many factors.</p>
+											<p>The company that gives you a guarantee has no basis for it, because no
+												one can predict exactly how much money the competition is investing and
+												what scenarios are possible. The main advantage of SEO companies is
+												their current results. It can be guaranteed that only methods that meet
+												Google's conditions will be used, and both positive results and good
+												positions are possible.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion__item js-accordion-item overflow-hidden" data-aos="fade-up"
+									data-aos-delay="200">
+									<div class="accordion-header js-accordion-header">HOW CAN I TRACK SEO RESULTS AND
+										SEE WHAT HAS BEEN DONE?</div>
+									<div class="accordion-body js-accordion-body">
+										<div class="accordion-body__contents">
+											<p>SEO results are very easy to monitor by changing your position in the
+												search engine, increasing the number of queries/keywords, increasing the
+												number of visits. Monthly reports from SEO specialists will clearly show
+												all marketing activity.</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="faq__illustration position-absolute" src="images/svg/faq-illustration.svg"
+					alt="FAQ Illustration">
+			</section>
+			<section id="news" class="lastNews position-relative overflow-hidden">
+				<div class="container position-relative">
+					<h2 class="section-title text-uppercase text-center" data-aos="fade-in">Last news</h2>
+					<p class="section-under-title text-center" data-aos="fade-in" data-aos-delay="200">Best insights</p>
+					<div class="row">
+						<div class="col-md-4" data-aos="fade-up">
+							<a href="/top-seo-trends-in-2023.html" class="lastNews__BlockImage overflow-hidden position-relative">
+								<span class="sk-spinner sk-spinner-pulse"></span>
+								<img class="lastNews__image position-absolute b-lazy" data-src="images/last-new-1.jpeg"
+									src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+									alt="How to develop a company correctly?">
+							</a>
+							<div class="lastNews__separator">Separator</div>
+							<h3 class="lastNews__title">
+								<a href="/top-seo-trends-in-2023.html" class="lastNews__titleLink">Top SEO trends in 2023</a>
+							</h3>
+							<p class="lastNews__text">This year, as in the past, we want to demonstrate the expertise and value of our content and continue to provide users with high-performing web pages. These strategies have always been important throughout the history of SEO, but Google strictly evaluates signals and determines which content truly meets these standards.</p>
+						</div>
+					</div>
+				</div>
+				<img class="lastNews__illustrationLeft position-absolute" src="images/svg/lastNews-illustrationLeft.svg"
+					alt="Last news Illustration left">
+				<img class="lastNews__illustrationRight position-absolute"
+					src="images/svg/lastNews-illustrationRight.svg" alt="Last news Illustration right">
+			</section>
+			<!-- <div class="subscribe container position-relative">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="subscribe__text text-center" data-aos="fade-in">Subscribe now - stay updated with new
+							insights</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="subscribe__BlockImage overflow-hidden position-relative" data-aos="fade"
+							data-aos-delay="300">
+							<div class="sk-spinner sk-spinner-pulse"></div>
+							<img class="subscribe__image position-absolute b-lazy" data-src="images/subscribe.jpg"
+								src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+								alt="">
+						</div>
+					</div>
+					<div class="col-md-6 align-items-center d-flex">
+						<form id="subscribe" class="subscribe__form d-flex w-100" action="#" name="subscribeForm"
+							method="POST">
+							<input type="email" name="email" class="subscribe__field h-100" placeholder="Your Email">
+							<button type="submit" class="subscribe__submit h-100">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div> -->
+		</main>
+		<div class="before-footer">
+			<svg viewBox="0 0 1919.289 108.543">
+				<defs>
+					<linearGradient id="linear-gradientFooter" x1="0.5" x2="0.5" y2="1"
+						gradientUnits="objectBoundingBox">
+						<stop offset="0" stop-color="#059469" />
+						<stop offset="1" stop-color="#28b0f2" />
+					</linearGradient>
+				</defs>
+				<path d="M0,0S155.888-64.222,257.492,0,1574.715,70.548,1753.749,0s165.3,78.415,165.3,78.415L0,80Z"
+					transform="translate(0 28.543)" opacity="0.818" fill="url(#linear-gradientFooter)" />
+			</svg>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-4 col-12 d-flex justify-content-center justify-content-md-start">
+						<a class="footer__logo logo" href="/">AtrMedia</a>
+					</div>
+					<div class="col-md-4 col-12 text-center">
+						<h2 class="footer__title">ArtMedia Consulting SRL</h2>
+						<p class="footer__text">Strategic marketing. We work for an effective result!</p>
+					</div>
+					<div class="col-md-4 col-12 d-flex justify-content-md-end">
+						<ul class="footer__list d-flex justify-content-between d-md-block flex-wrap">
+							<li class="footer__listItem">
+								<a class="footer__listIink" href="mailto:info@art-media.ro">info@art-media.ro</a>
+							</li>
+							<!-- <li class="footer__listItem">
+								<a class="footer__listIink" href="tel:89998887788">8 999 888 77 88</a>
+							</li> -->
+							<li class="footer__listItem">
+								<a class="footer__listIink" href="/privacy-policy.html">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="footer__copyright">&copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved. Design by <a href="https://mmix.ua/" target="_blank">MMIX</a>.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/scripts.js"></script>
+	<script src="js/aos/aos.min.js"></script>
+	<script src="js/aos/aos-settings.js"></script>
+
+</body>
+
+</html>
