@@ -432,6 +432,36 @@ jQuery(document).ready(function () {
 		$('.popup__content.formBlock').removeClass('popup__content-close');
 		$('.popup__content.thankBlock').addClass('popup__content-close');
 	});
+
+	function CheckPopupForm() {
+		$('#popupForm .chimeForm__field:not(.chimeForm__button):not(.chimeForm__dateTime):not(.d-none)').each(function() {
+			if ($(this).val() != '' && $(this).parent().not(".invalid")) {
+				$("#popup-send").removeAttr("disabled");
+			}
+			else{
+				$("#popup-send").attr("disabled", "disabled");
+				return false;
+			}
+		});
+	}
+	
+	$('.chimeForm__field').on('keypress keyup keydown', function () {CheckPopupForm();});
+
+	function CheckMessageForm() {
+		$('#appointmentForm .appointment__field').each(function() {
+			if ($(this).val() != '' && $(this).parent().not(".invalid")) {
+				$("#appointment-send").removeAttr("disabled");
+			}
+			else{
+				$("#appointment-send").attr("disabled", "disabled");
+				return false;
+			}
+		});
+	}
+	
+	$('.appointment__field').on('keypress keyup keydown', function () {CheckMessageForm();});
+
+
 	// $("#popupForm").submit(function () {
 	// 	var str = $(this).serialize();
 	// 	$.ajax({
